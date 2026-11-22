@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor de Quem | Produção Floral, Cenografia & Eventos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display (Bold Editorial Serif), Pinyon Script / Great Vibes (Calligraphic Script), Plus Jakarta Sans (Clean Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        script: ['"Great Vibes"', 'cursive'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: '#12100E',
+                        charcoal: '#1B1815',
+                        champagne: '#EFE29B',
+                        gold: '#D8B863',
+                        ivory: '#F5F1E8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Editorial & Luxury Visual Refinements */
+        body {
+            background-color: #12100E;
+            color: #F5F1E8;
+        }
+        .text-glow {
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F8EEB4 0%, #D8B863 50%, #EFE29B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.9s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-ivory font-sans antialiased selection:bg-champagne selection:text-obsidian">
+
+    <!-- Floating Minimalist Header -->
+    <header class="fixed top-0 inset-x-0 z-40 bg-obsidian/85 backdrop-blur-md border-b border-champagne/15 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex shrink-0 items-center" aria-label="Flor de Quem">
+                <img src="logo-transparente.png" alt="Flor de Quem" class="h-14 w-auto max-w-28 object-contain">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.15em] font-medium text-ivory/80">
+                <a href="#quem-somos" class="hover:text-champagne transition">Quem Nós Somos</a>
+                <a href="#servicos" class="hover:text-champagne transition">O Que Fazemos</a>
+                <a href="#portfolio" class="hover:text-champagne transition">Portfólio</a>
+                <a href="#natal-assinatura" class="hover:text-champagne transition">Natal & Assinatura</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="ml-auto flex items-center gap-3">
+                <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-champagne hover:bg-gold text-obsidian text-xs uppercase tracking-wider font-bold px-5 py-3 rounded-full transition-all shadow-lg">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                    <span>Solicitar Orçamento</span>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-champagne hover:bg-charcoal transition" aria-label="Abrir Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-b border-champagne/20 px-6 py-6 space-y-4">
+            <a href="#quem-somos" class="block text-sm uppercase tracking-widest text-ivory hover:text-champagne">Quem Nós Somos</a>
+            <a href="#servicos" class="block text-sm uppercase tracking-widest text-ivory hover:text-champagne">O Que Fazemos</a>
+            <a href="#portfolio" class="block text-sm uppercase tracking-widest text-ivory hover:text-champagne">Portfólio</a>
+            <a href="#natal-assinatura" class="block text-sm uppercase tracking-widest text-ivory hover:text-champagne">Natal & Assinatura</a>
+            <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-champagne text-obsidian text-xs uppercase tracking-wider font-bold px-5 py-3.5 rounded-full mt-2">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Falar com Nossa Equipe</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[92vh] flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Lush Floral Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="casamento.jpeg1.jpg" 
+                onerror="this.src='https://placehold.co/1600x900/1B1815/EFE29B?text=Flor+de+Quem'"
+                alt="Cenografia floral exuberante Flor de Quem" 
+                class="w-full h-full object-cover object-center scale-105 filter brightness-[0.42]"
+            >
+            <div class="absolute inset-0 bg-gradient-to-b from-obsidian/60 via-obsidian/30 to-obsidian"></div>
+        </div>
+
+        <!-- Editorial Title Overlay -->
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center fade-in-up">
+            <p class="font-script text-5xl sm:text-7xl md:text-8xl text-champagne text-glow mb-0 sm:mb-1 transform -rotate-3">
+                nossa essência
+            </p>
+            <img src="logo-transparente.png" alt="Flor de Quem" class="mx-auto mt-1 w-48 sm:w-60 md:w-72 h-auto drop-shadow-lg">
+
+            <p class="mt-8 max-w-xl mx-auto text-sm sm:text-base text-ivory/90 font-light leading-relaxed">
+                Transformamos ambientes e celebrações por meio da arte floral e da cenografia. Desenvolvemos projetos que unem criatividade, técnica e sensibilidade, abrangendo produção floral, cenografia de eventos, cenografia natalina, buquês personalizados e assessoria floral. Cada criação é pensada para valorizar espaços, traduzir identidade e proporcionar experiências únicas.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-champagne hover:bg-gold text-obsidian font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-full transition-all shadow-xl">
+                    Solicitar Orçamento
+                </a>
+                <a href="#portfolio" class="w-full sm:w-auto border border-champagne/50 hover:border-champagne text-champagne font-medium text-xs uppercase tracking-widest px-8 py-4 rounded-full transition-all backdrop-blur-sm">
+                    Explorar Portfólio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUEM NÓS SOMOS (Exact story & asymmetric collage layout from reference) -->
+    <section id="quem-somos" class="py-20 lg:py-28 bg-obsidian">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="font-script text-5xl sm:text-6xl text-champagne leading-none">
+                    Quem nós <span class="block sm:inline font-serif text-3xl sm:text-4xl font-bold tracking-tight text-champagne not-italic">somos?</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <!-- Left Asymmetric 3-Photo Collage -->
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img 
+                            src="casamento.jpeg8.jpg" 
+                            onerror="this.src='https://placehold.co/500x500/1B1815/EFE29B?text=Cenografia+de+Casamento'"
+                            alt="Cenografia floral de casamento ao ar livre" 
+                            class="w-full h-52 sm:h-64 object-cover rounded-2xl border border-champagne/20 shadow-lg"
+                        >
+                        <img 
+                            src="aniversario.jpeg4.jpg" 
+                            onerror="this.src='https://placehold.co/500x500/1B1815/EFE29B?text=Aniversario+Floral'"
+                            alt="Decoração floral para aniversário" 
+                            class="w-full h-52 sm:h-64 object-cover rounded-2xl border border-champagne/20 shadow-lg"
+                        >
+                    </div>
+                    <div>
+                        <img 
+                            src="corporativo.jpeg3.jpg" 
+                            onerror="this.src='https://placehold.co/900x500/1B1815/EFE29B?text=Evento+Corporativo'"
+                            alt="Arranjo floral em evento corporativo" 
+                            class="w-full h-60 sm:h-72 object-cover rounded-2xl border border-champagne/20 shadow-lg"
+                        >
+                    </div>
+                </div>
+
+                <!-- Right Brand Story Copy -->
+                <div class="lg:col-span-6 space-y-5 text-ivory/90 text-sm sm:text-base leading-relaxed font-light">
+                    <p class="text-champagne font-medium text-lg font-serif italic">
+                        "Toda história começa com um olhar, um encantamento e um sonho."
+                    </p>
+                    <p>
+                        A história da <strong class="text-champagne font-semibold">Flor de Quem</strong> começou há mais de oito anos, durante uma viagem ao interior de São Paulo. Em meio às compras de Natal, conheci a Bem Me Quer, uma loja especializada em flores de toque real, e fiquei encantada com a delicadeza e a beleza daquele universo.
+                    </p>
+                    <p>
+                        Na volta para casa, dentro de um avião, olhando para o céu, nasceu o desejo de trabalhar com flores e compartilhar esse encanto. Foi quando comecei a pensar em tudo o que existe por trás de uma celebração: <em>quem sonha, quem organiza, quem cuida de cada detalhe, quem faz acontecer?</em>
+                    </p>
+                    <p class="text-champagne font-serif text-xl italic">
+                        E então surgiu a pergunta: Flor de Quem?
+                    </p>
+                    <p>
+                        Aquele nome nasceu naquele momento e ficou guardado no meu coração por anos, como uma semente esperando o tempo certo para florescer. Até que o sonho ganhou forma e nasceu a <strong class="text-ivory font-semibold">Flor de Quem</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CELEBRAMOS TODOS OS MOMENTOS (Matching reference manifesto section) -->
+    <section id="servicos" class="py-20 bg-charcoal border-y border-champagne/15">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-script text-5xl sm:text-7xl text-champagne leading-tight">
+                Celebramos 
+                <span class="inline-block border-2 border-champagne rounded-full px-5 py-0.5 font-serif text-2xl sm:text-3xl not-italic tracking-normal align-middle mx-1">
+                    todos
+                </span>
+                <span class="block -mt-2">os momentos</span>
+            </h2>
+
+            <p class="mt-8 text-base sm:text-lg text-ivory/90 leading-relaxed font-light">
+                Na <strong class="text-champagne font-medium">Flor de Quem</strong>, acreditamos que cada ocasião merece ser vivida de forma única. Por isso, criamos e produzimos eventos com flores, decoração e detalhes pensados especialmente para cada história.
+            </p>
+            <p class="mt-4 text-base sm:text-lg text-ivory/90 leading-relaxed font-light">
+                Realizamos <span class="underline decoration-champagne/70 underline-offset-4">eventos corporativos, festas intimistas</span> — como <span class="underline decoration-champagne/70 underline-offset-4">noivados, jantares e reuniões especiais</span> —, <span class="underline decoration-champagne/70 underline-offset-4">festas de debutante, aniversários e casamentos</span>, além da nossa <span class="text-champagne font-medium">assinatura floral personalizada</span>, <span class="text-champagne font-medium">cenografia de Natal</span> e <span class="text-champagne font-medium">assessoria floral</span> criada para levar identidade e delicadeza a cada celebração.
+            </p>
+            <p class="mt-4 text-sm sm:text-base text-champagne/90 italic font-serif">
+                Seja para um grande evento ou para um encontro mais íntimo, estamos aqui para transformar momentos especiais em memórias que florescem.
+            </p>
+
+            <!-- 8 Service Cards (Complete scope of Flor de Quem) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-14 text-left">
+                <div class="bg-obsidian/80 p-6 rounded-2xl border border-champagne/20 hover:border-champagne/60 transition group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-serif text-xl font-bold text-champagne">Casamentos</span>
+                        <i data-lucide="heart" class="w-5 h-5 text-champagne/70 group-hover:text-champagne"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-ivory/75 leading-relaxed">Cerimônia completa, altar floral, caminho da noiva, recepção e ambientação aérea.</p>
+                </div>
+
+                <div class="bg-obsidian/80 p-6 rounded-2xl border border-champagne/20 hover:border-champagne/60 transition group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-serif text-xl font-bold text-champagne">Buquês de Noiva</span>
+                        <i data-lucide="sparkles" class="w-5 h-5 text-champagne/70 group-hover:text-champagne"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-ivory/75 leading-relaxed">Buquês autorais de noiva, lapelas, coroas florais e detalhes para madrinhas e daminhas.</p>
+                </div>
+
+                <div class="bg-obsidian/80 p-6 rounded-2xl border border-champagne/20 hover:border-champagne/60 transition group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-serif text-xl font-bold text-champagne">Aniversários</span>
+                        <i data-lucide="calendar-heart" class="w-5 h-5 text-champagne/70 group-hover:text-champagne"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-ivory/75 leading-relaxed">Decoração floral para aniversários, festas de debutante e celebrações especiais.</p>
+                </div>
+
+                <div class="bg-obsidian/80 p-6 rounded-2xl border border-champagne/20 hover:border-champagne/60 transition group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-serif text-xl font-bold text-champagne">Eventos Corporativos</span>
+                        <i data-lucide="building-2" class="w-5 h-5 text-champagne/70 group-hover:text-champagne"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-ivory/75 leading-relaxed">Lançamentos, jantares empresariais, convenções, palcos e ambientação de marcas.</p>
+                </div>
+
+                <div class="bg-obsidian/80 p-6 rounded-2xl border border-champagne/20 hover:border-champagne/60 transition group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-serif text-xl font-bold text-champagne">Cenografia de Natal</span>
+                        <i data-lucide="tree-pine" class="w-5 h-5 text-champagne/70 group-hover:text-champagne"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-ivory/75 leading-relaxed">Projetos natalinos completos para residências, lojas, clínicas e recepções corporativas.</p>
+                </div>
+
+                <div class="bg-obsidian/80 p-6 rounded-2xl border border-champagne/20 hover:border-champagne/60 transition group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-serif text-xl font-bold text-champagne">Assinatura Floral</span>
+                        <i data-lucide="calendar-heart" class="w-5 h-5 text-champagne/70 group-hover:text-champagne"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-ivory/75 leading-relaxed">Troca periódica de arranjos exclusivos para clínicas, escritórios, restaurantes e residências.</p>
+                </div>
+
+                <div class="bg-obsidian/80 p-6 rounded-2xl border border-champagne/20 hover:border-champagne/60 transition group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-serif text-xl font-bold text-champagne">Assessoria Floral</span>
+                        <i data-lucide="compass" class="w-5 h-5 text-champagne/70 group-hover:text-champagne"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-ivory/75 leading-relaxed">Consultoria de paleta, escolha botânica, harmonização com mobiliário e acompanhamento técnico.</p>
+                </div>
+
+                <div class="bg-obsidian/80 p-6 rounded-2xl border border-champagne/20 hover:border-champagne/60 transition group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-serif text-xl font-bold text-champagne">Outros</span>
+                        <i data-lucide="sparkles" class="w-5 h-5 text-champagne/70 group-hover:text-champagne"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-ivory/75 leading-relaxed">Projetos florais personalizados para outras ocasiões e necessidades especiais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SHOWCASE (Editorial Vertical Gallery matching the screenshots: Casamentos, Eventos Corporativos, Natal & Noivas) -->
+    <section id="portfolio" class="py-20 lg:py-28 bg-obsidian">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase tracking-[0.28em] text-champagne/80">Nossas Produções</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-champagne mt-2">Portfólio Selecionado</h2>
+
+                <!-- Category Filter Pills -->
+                <div class="flex flex-wrap justify-center gap-2.5 mt-8">
+                    <button onclick="filterPortfolio('todos', this)" class="port-btn px-5 py-2 rounded-full text-xs uppercase tracking-wider font-bold bg-champagne text-obsidian transition">Todos</button>
+                    <button onclick="filterPortfolio('casamentos', this)" class="port-btn px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-charcoal text-ivory border border-champagne/25 hover:border-champagne transition">Casamentos & Noivas</button>
+                    <button onclick="filterPortfolio('intimistas', this)" class="port-btn px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-charcoal text-ivory border border-champagne/25 hover:border-champagne transition">Aniversários & Intimistas</button>
+                    <button onclick="filterPortfolio('corporativo', this)" class="port-btn px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-charcoal text-ivory border border-champagne/25 hover:border-champagne transition">Eventos Corporativos</button>
+                    <button onclick="filterPortfolio('natal', this)" class="port-btn px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-charcoal text-ivory border border-champagne/25 hover:border-champagne transition">Cenografia de Natal</button>
+                </div>
+            </div>
+
+            <!-- Editorial Portfolio Blocks -->
+            <div id="portfolio-container" class="space-y-20">
+                
+                <!-- Block 1: Casamentos & Noivas -->
+                <div class="portfolio-group space-y-6" data-category="casamentos">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg1.jpg"
+                                alt="Decoração floral de casamento — foto 1"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg2.jpg"
+                                alt="Decoração floral de casamento — foto 2"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg3.jpg"
+                                alt="Decoração floral de casamento — foto 3"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg4.jpg"
+                                alt="Decoração floral de casamento — foto 4"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg5.jpg"
+                                alt="Decoração floral de casamento — foto 5"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg6.jpg"
+                                alt="Decoração floral de casamento — foto 6"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg7.jpg"
+                                alt="Decoração floral de casamento — foto 7"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg8.jpg"
+                                alt="Decoração floral de casamento — foto 8"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg9.jpg"
+                                alt="Decoração floral de casamento — foto 9"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg10.jpg"
+                                alt="Decoração floral de casamento — foto 10"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg11.jpg"
+                                alt="Decoração floral de casamento — foto 11"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg12.jpg"
+                                alt="Decoração floral de casamento — foto 12"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="casamento.jpeg13.jpg"
+                                alt="Decoração floral de casamento — foto 13"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center py-4">
+                        <h3 class="font-serif text-4xl sm:text-6xl font-bold text-champagne tracking-tight">
+                            Casamentos & Noivas
+                        </h3>
+                        <p class="text-sm text-ivory/75 max-w-xl mx-auto mt-2">
+                            Do buquê da noiva à cenografia completa do altar e festa: projetos autorais desenhados para emocionar em cada ângulo.
+                        </p>
+                        <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-champagne border-b border-champagne pb-1 hover:text-ivory hover:border-ivory transition">
+                            <span>Orçar meu casamento</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Block 2: Aniversários & Eventos Intimistas -->
+                <div class="portfolio-group space-y-6" data-category="intimistas">
+                    <div class="text-center py-2">
+                        <span class="font-script text-3xl sm:text-4xl text-champagne/90 block -mb-1">celebrações únicas</span>
+                        <h3 class="font-serif text-4xl sm:text-6xl font-bold text-champagne tracking-tight leading-tight">
+                            Aniversários &<br>Eventos Intimistas
+                        </h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="aniversario.jpeg.jpg"
+                                alt="Decoração floral de aniversário — foto 1"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="aniversario.jpeg2.jpg"
+                                alt="Decoração floral de aniversário — foto 2"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="aniversario.jpeg3.jpg"
+                                alt="Decoração floral de aniversário — foto 3"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="aniversario.jpeg4.jpg"
+                                alt="Decoração floral de aniversário — foto 4"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="aniversario.jpeg5.jpg"
+                                alt="Decoração floral de aniversário — foto 5"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="aniversario.jpeg6.jpg"
+                                alt="Decoração floral de aniversário — foto 6"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="aniversario.jpeg7.jpg"
+                                alt="Decoração floral de aniversário — foto 7"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="aniversário.jpeg1.jpg"
+                                alt="Decoração floral de aniversário — foto 8"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="jantar.jpeg.jpg"
+                                alt="Decoração floral para jantar intimista — foto 1"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="jantar.jpeg2.jpg"
+                                alt="Decoração floral para jantar intimista — foto 2"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="jantar.jpeg3.jpg"
+                                alt="Decoração floral para jantar intimista — foto 3"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="jantar.jpeg4.jpg"
+                                alt="Decoração floral para jantar intimista — foto 4"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="jantar.jpeg5.jpg"
+                                alt="Decoração floral para jantar intimista — foto 5"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="jantar.jpeg6.jpg"
+                                alt="Decoração floral para jantar intimista — foto 6"
+                                loading="lazy"
+                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="text-sm text-ivory/75 max-w-xl mx-auto">
+                            Aniversários adultos e infantis, festas de 15 anos, noivados, batizados e jantares especiais com mesas postas e arranjos acolhedores.
+                        </p>
+                        <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-champagne border-b border-champagne pb-1 hover:text-ivory hover:border-ivory transition">
+                            <span>Orçar minha comemoração</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Block 3: Eventos Corporativos -->
+                <div class="portfolio-group space-y-6" data-category="corporativo">
+                    <div class="text-center py-2">
+                        <h3 class="font-serif text-4xl sm:text-6xl font-bold text-champagne tracking-tight leading-none">
+                            Eventos<br>corporativos
+                        </h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="corporativo.jpeg.jpg"
+                                alt="Decoração floral de evento corporativo — foto 1"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="corporativo.jpeg2.jpg"
+                                alt="Decoração floral de evento corporativo — foto 2"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="corporativo.jpeg3.jpg"
+                                alt="Decoração floral de evento corporativo — foto 3"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="corporativo.jpeg4.jpg"
+                                alt="Decoração floral de evento corporativo — foto 4"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="corporativo.jpeg5.jpg"
+                                alt="Decoração floral de evento corporativo — foto 5"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="corporativo.jpeg6.jpg"
+                                alt="Decoração floral de evento corporativo — foto 6"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20">
+                            <img
+                                src="corporativo.jpeg7.jpg"
+                                alt="Decoração floral de evento corporativo — foto 7"
+                                loading="lazy"
+                                class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="text-sm text-ivory/75 max-w-xl mx-auto">
+                            Montagens aéreas, centros de mesa, lounges e recepções que elevam a experiência visual da sua marca e dos seus convidados.
+                        </p>
+                        <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-champagne border-b border-champagne pb-1 hover:text-ivory hover:border-ivory transition">
+                            <span>Solicitar proposta corporativa</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Block 4: Cenografia de Natal -->
+                <div class="portfolio-group space-y-6" data-category="natal">
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="overflow-hidden rounded-2xl border border-champagne/20 max-w-3xl w-full mx-auto">
+                            <img src="natal.jpeg.jpg" alt="Cenografia floral de Natal" loading="lazy" class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+
+                    <div class="text-center py-2">
+                        <h3 class="font-serif text-4xl sm:text-6xl font-bold text-champagne tracking-tight">
+                            Cenografia de Natal
+                        </h3>
+                        <p class="text-sm text-ivory/75 max-w-xl mx-auto mt-2">
+                            Montagem de árvores exclusivas, guirlandas monumentais, fachadas e mesas natalinas para encantar famílias, clientes e equipes.
+                        </p>
+                        <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-champagne border-b border-champagne pb-1 hover:text-ivory hover:border-ivory transition">
+                            <span>Reservar projeto de Natal</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSINATURA & ASSESSORIA FLORAL (High-value recurring & consulting CTA) -->
+    <section id="natal-assinatura" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto bg-charcoal rounded-3xl p-8 sm:p-12 lg:p-14 border border-champagne/25 relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4">
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-champagne/10 text-champagne text-xs font-semibold uppercase tracking-widest">
+                        Assinatura & Assessoria
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ivory leading-tight">
+                        Sua empresa ou residência com arranjos sempre impecáveis.
+                    </h2>
+                    <p class="text-ivory/80 text-sm sm:text-base leading-relaxed font-light">
+                        Com a <strong class="text-champagne font-medium">Assinatura Floral Flor de Quem</strong>, nossa equipe cuida da curadoria, vasos, montagem e substituição periódica dos arranjos — utilizando flores naturais ou toque real de altíssimo padrão. Também oferecemos <strong class="text-champagne font-medium">Assessoria Floral</strong> completa para eventos e projetos de ambientação.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="bg-champagne hover:bg-gold text-obsidian font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition">
+                            Contratar Assinatura
+                        </a>
+                        <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="border border-champagne/40 hover:border-champagne text-champagne font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition">
+                            Agendar Assessoria
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSINATURA & ASSESSORIA FLORAL (High-value recurring & consulting CTA) -->
+    <section id="natal-assinatura" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto bg-charcoal rounded-3xl p-8 sm:p-12 lg:p-14 border border-champagne/25 relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4">
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-champagne/10 text-champagne text-xs font-semibold uppercase tracking-widest">
+                        Assinatura & Assessoria
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ivory leading-tight">
+                        Sua empresa ou residência com arranjos sempre impecáveis.
+                    </h2>
+                    <p class="text-ivory/80 text-sm sm:text-base leading-relaxed font-light">
+                        Com a <strong class="text-champagne font-medium">Assinatura Floral Flor de Quem</strong>, nossa equipe cuida da curadoria, vasos, montagem e substituição periódica dos arranjos — utilizando flores naturais ou toque real de altíssimo padrão. Também oferecemos <strong class="text-champagne font-medium">Assessoria Floral</strong> completa para eventos e projetos de ambientação.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <button onclick="openBudgetModal('Assinatura Floral')" class="bg-champagne hover:bg-gold text-obsidian font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition">
+                            Contratar Assinatura
+                        </button>
+                        <button onclick="openBudgetModal('Assessoria Floral')" class="border border-champagne/40 hover:border-champagne text-champagne font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition">
+                            Agendar Assessoria
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <img 
+                        src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80" 
+                        onerror="this.src='https://placehold.co/600x500/12100E/EFE29B?text=Assinatura+Floral'"
+                        alt="Assinatura floral corporativa e residencial" 
+                        class="w-full h-64 sm:h-72 object-cover rounded-2xl border border-champagne/20 shadow-xl"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CONVERSION CTA -->
+    <section class="py-20 bg-obsidian text-center px-4">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <p class="font-script text-5xl sm:text-6xl text-champagne">Vamos florescer o seu próximo momento?</p>
+            <p class="text-sm sm:text-base text-ivory/80 max-w-xl mx-auto font-light">
+                Conte-nos a data, o estilo e o sonho do seu evento ou projeto. Preparamos uma proposta personalizada com toda a identidade da Flor de Quem.
+            </p>
+            <div class="pt-2">
+                <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-champagne hover:bg-gold text-obsidian font-bold text-xs sm:text-sm uppercase tracking-widest px-9 py-4 rounded-full shadow-2xl transition transform hover:-translate-y-0.5">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Falar no WhatsApp Agora</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-charcoal border-t border-champagne/15 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <img src="logo-transparente.png" alt="Flor de Quem" class="mx-auto w-32 sm:w-36 h-auto md:mx-0">
+                <p class="text-xs text-ivory/60 mt-1">
+                    Montagem Floral para Eventos • Cenografia de Natal • Noivas • Assinatura & Assessoria
+                </p>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://www.instagram.com/flor.de.quem/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-obsidian border border-champagne/25 flex items-center justify-center text-champagne hover:bg-champagne hover:text-obsidian transition" aria-label="Instagram">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <circle cx="18" cy="6" r="0.8" fill="currentColor" stroke="none"></circle>
+                    </svg>
+                </a>
+                <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-obsidian border border-champagne/25 flex items-center justify-center text-champagne hover:bg-champagne hover:text-obsidian transition" aria-label="WhatsApp">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <p class="text-xs text-ivory/50">
+                © 2026 Flor de Quem. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+        <a href="https://wa.me/5568999897020?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20florais!%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer" class="bg-champagne hover:bg-gold text-obsidian p-4 rounded-full shadow-2xl hover:scale-105 transition-all flex items-center gap-2 group" aria-label="Solicitar Orçamento no WhatsApp">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+            <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap text-xs font-bold uppercase tracking-wider">
+                Orçamento
+            </span>
+        </a>
+        <a href="https://www.instagram.com/flor.de.quem/" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-obsidian border border-champagne/25 flex items-center justify-center text-champagne hover:bg-champagne hover:text-obsidian shadow-2xl transition" aria-label="Instagram da Flor de Quem">
+            <svg aria-hidden="true" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="18" cy="6" r="0.8" fill="currentColor" stroke="none"></circle>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Custom Event / Project Briefing Modal (Direct WhatsApp Lead Capture) -->
+    <div id="budget-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-charcoal rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-champagne/30 relative">
+            <button onclick="closeBudgetModal()" class="absolute top-5 right-5 p-2 rounded-full text-ivory/60 hover:bg-obsidian hover:text-champagne transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-champagne">Atendimento Exclusivo</span>
+                <h3 id="modal-service-title" class="font-serif text-2xl sm:text-3xl font-bold text-ivory mt-1">Solicitar Orçamento</h3>
+                <p class="text-xs text-ivory/70 mt-1">Preencha os detalhes abaixo para iniciarmos seu projeto no WhatsApp.</p>
+            </div>
+
+            <form onsubmit="sendLeadToWhatsApp(event)" class="space-y-4">
+                <div>
+                    <label for="lead-name" class="block text-xs font-semibold uppercase tracking-wider text-champagne/90 mb-1.5">Seu Nome / Empresa</label>
+                    <input type="text" id="lead-name" required placeholder="Ex: Camila Rocha" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-champagne/25 text-ivory placeholder-ivory/35 focus:outline-none focus:border-champagne text-sm">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label for="lead-service" class="block text-xs font-semibold uppercase tracking-wider text-champagne/90 mb-1.5">Tipo de Serviço</label>
+                        <select id="lead-service" required class="w-full px-3.5 py-3 rounded-xl bg-obsidian border border-champagne/25 text-ivory focus:outline-none focus:border-champagne text-sm">
+                            <option value="" selected disabled>Selecione o serviço</option>
+                            <option value="Casamento">Casamento</option>
+                            <option value="Buquês de Noiva">Buquês de Noiva</option>
+                            <option value="Evento Corporativo">Evento Corporativo</option>
+                            <option value="Cenografia de Natal">Cenografia de Natal</option>
+                            <option value="Festa Intimista / Aniversário">Festa Intimista / Aniversário / Debutante</option>
+                            <option value="Assinatura Floral">Assinatura Floral</option>
+                            <option value="Assessoria Floral">Assessoria Floral</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="lead-date" class="block text-xs font-semibold uppercase tracking-wider text-champagne/90 mb-1.5">Data Prevista</label>
+                        <input type="date" id="lead-date" class="w-full px-3.5 py-3 rounded-xl bg-obsidian border border-champagne/25 text-ivory focus:outline-none focus:border-champagne text-sm">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label for="lead-location" class="block text-xs font-semibold uppercase tracking-wider text-champagne/90 mb-1.5">Cidade do evento</label>
+                        <input type="text" id="lead-location" placeholder="Ex.: Rio Branco, AC" class="w-full px-3.5 py-3 rounded-xl bg-obsidian border border-champagne/25 text-ivory placeholder-ivory/35 focus:outline-none focus:border-champagne text-sm">
+                    </div>
+                    <div>
+                        <label for="lead-guests" class="block text-xs font-semibold uppercase tracking-wider text-champagne/90 mb-1.5">Número de convidados</label>
+                        <input type="number" id="lead-guests" min="1" placeholder="Ex.: 80" class="w-full px-3.5 py-3 rounded-xl bg-obsidian border border-champagne/25 text-ivory placeholder-ivory/35 focus:outline-none focus:border-champagne text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="lead-notes" class="block text-xs font-semibold uppercase tracking-wider text-champagne/90 mb-1.5">Prévia do evento</label>
+                    <textarea id="lead-notes" rows="3" placeholder="Conte o estilo, cores, flores ou outros detalhes importantes..." class="w-full px-4 py-3 rounded-xl bg-obsidian border border-champagne/25 text-ivory placeholder-ivory/35 focus:outline-none focus:border-champagne text-sm"></textarea>
+                </div>
+
+                <button type="submit" class="w-full flex items-center justify-center gap-2 bg-champagne hover:bg-gold text-obsidian font-bold text-xs uppercase tracking-widest py-4 px-6 rounded-full transition shadow-lg mt-2">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Enviar Solicitação no WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Portfolio category filter
+        function filterPortfolio(category, clickedBtn) {
+            document.querySelectorAll('.port-btn').forEach(btn => {
+                btn.classList.remove('bg-champagne', 'text-obsidian', 'font-bold');
+                btn.classList.add('bg-charcoal', 'text-ivory', 'border', 'border-champagne/25', 'font-semibold');
+            });
+            clickedBtn.classList.remove('bg-charcoal', 'text-ivory', 'border', 'border-champagne/25', 'font-semibold');
+            clickedBtn.classList.add('bg-champagne', 'text-obsidian', 'font-bold');
+
+            document.querySelectorAll('.portfolio-group').forEach(group => {
+                if (category === 'todos' || group.dataset.category === category) {
+                    group.classList.remove('hidden');
+                } else {
+                    group.classList.add('hidden');
+                }
+            });
+        }
+
+        // Budget Modal Controls
+        function openBudgetModal(serviceContext) {
+            document.getElementById('modal-service-title').textContent = serviceContext;
+            const selectEl = document.getElementById('lead-service');
+            const context = serviceContext.toLowerCase();
+            selectEl.value = '';
+            if (context.includes('buquê') || context.includes('noiva')) selectEl.value = 'Buquês de Noiva';
+            else if (context.includes('casamento')) selectEl.value = 'Casamento';
+            else if (context.includes('aniversário') || context.includes('intimista') || context.includes('comemora')) selectEl.value = 'Festa Intimista / Aniversário';
+            else if (context.includes('corporativ')) selectEl.value = 'Evento Corporativo';
+            else if (context.includes('natal')) selectEl.value = 'Cenografia de Natal';
+            else if (context.includes('assinatura')) selectEl.value = 'Assinatura Floral';
+            else if (context.includes('assessoria')) selectEl.value = 'Assessoria Floral';
+
+            const modal = document.getElementById('budget-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.getElementById('lead-name').focus();
+        }
+
+        function getServiceContext(label) {
+            const context = label.toLowerCase();
+            if (context.includes('casamento')) return 'Casamento';
+            if (context.includes('aniversário') || context.includes('intimista') || context.includes('comemora')) return 'Festa Intimista / Aniversário';
+            if (context.includes('corporativ')) return 'Evento Corporativo';
+            if (context.includes('natal')) return 'Cenografia de Natal';
+            if (context.includes('assinatura')) return 'Assinatura Floral';
+            if (context.includes('assessoria')) return 'Assessoria Floral';
+            return 'Solicitar Orçamento';
+        }
+
+        document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                openBudgetModal(getServiceContext(link.textContent));
+            });
+        });
+
+        function closeBudgetModal() {
+            const modal = document.getElementById('budget-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Build formatted WhatsApp briefing message
+        function sendLeadToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('lead-name').value.trim();
+            const service = document.getElementById('lead-service').value;
+            const eventDate = document.getElementById('lead-date').value.trim();
+            const location = document.getElementById('lead-location').value.trim();
+            const guests = document.getElementById('lead-guests').value.trim();
+            const notes = document.getElementById('lead-notes').value.trim();
+
+            // Official WhatsApp number of Flor de Quem (55 + DDD + Number)
+            const phone = '5568999897020';
+
+            let message = `Olá, *Flor de Quem*! ✨ Meu nome é *${name}*.\n`;
+            message += `Gostaria de solicitar um orçamento para: *${service}*.\n`;
+            if (eventDate) message += `• *Data prevista:* ${eventDate.split('-').reverse().join('/')}\n`;
+            if (location) message += `• *Cidade do evento:* ${location}\n`;
+            if (guests) message += `• *Número de convidados:* ${guests}\n`;
+            if (notes) message += `• *Prévia do evento:* ${notes}\n`;
+            message += `\nPodemos conversar sobre a disponibilidade e proposta?`;
+
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            closeBudgetModal();
+        }
+    </script>
+</body>
+</html>
